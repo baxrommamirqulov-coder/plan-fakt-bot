@@ -33,7 +33,8 @@ from telethon.tl.types import InputPhoneContact, User
 
 API_ID = int(os.environ["TG_API_ID"])
 API_HASH = os.environ["TG_API_HASH"]
-SESSION = os.environ["TG_SESSION"]
+# Нусхалашда тушиб қолган бўшлиқ, қатор ва "=== TG_SESSION ===" сарлавҳасини тозалаймиз
+SESSION = re.sub(r"\s+", "", os.environ["TG_SESSION"]).replace("===TG_SESSION===", "")
 SA_JSON = json.loads(os.environ["GOOGLE_SA_JSON"])
 SHEET_ID = os.environ["SHEET_ID"]
 WORKSHEET = os.environ.get("WORKSHEET", "План факат")
