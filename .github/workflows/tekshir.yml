@@ -2,7 +2,7 @@ name: План-факт текшируви
 
 on:
   schedule:
-    - cron: "0 6 * * 1-6"
+    - cron: "20 4 * * 1-6"
   workflow_dispatch:
     inputs:
       dry_run:
